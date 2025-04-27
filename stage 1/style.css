@@ -1,0 +1,128 @@
+/* General page styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('tree.jpg'); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+/* Heading style */
+h1 {
+  font-size: 36px;
+  color: #8B0000;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  padding: 10px;
+  z-index: 10;
+}
+
+/* Level buttons styling */
+.level-buttons-container {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.level-button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* Game board styling */
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  grid-gap: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 50px; /* Initially slim */
+  padding-bottom: 10px;
+  transition: min-height 0.3s ease; /* Smooth expansion */
+}
+
+#game-board.has-cards {
+  min-height: 220px; /* Expands when cards are added */
+}
+
+/* Card styling */
+.card {
+  width: 150px;
+  height: 200px;
+  perspective: 1000px; /* Enable 3D perspective for the flip effect */
+  position: relative;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d; /* Enable 3D flip */
+  transition: transform 0.8s ease; /* Smooth flip transition */
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg); /* Flip the card */
+}
+
+/* Front and back of the card */
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back side when flipped */
+  border-radius: 10px;
+}
+
+.card-front {
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg); /* Initially hidden with a 180-degree flip */
+}
+
+.card-back {
+  background-color: #ff6347; /* Back color (tomato red) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+}
+
+/* Green for matching cards with transparent overlay */
+.card.match .card-front {
+  background-color: rgba(50, 205, 50, 0.7) !important; /* Light green with 30% transparency */
+  background-blend-mode: overlay; /* Blend the color with the image */
+}
+
+/* Red for non-matching cards with transparent overlay */
+.card.nomatch .card-front {
+  background-color: rgba(255, 99, 71, 0.7) !important; /* Red with 30% transparency */
+  background-blend-mode: overlay; /* Blend the color with the image */
+}
+
+
+/* Hover effect only when not flipped */
+.card:not(.flipped):hover .card-inner {
+  transform: scale(1.1); /* Slightly enlarge the card on hover */
+}

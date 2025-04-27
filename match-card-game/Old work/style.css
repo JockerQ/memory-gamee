@@ -1,0 +1,189 @@
+/* General page styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Cover Page Fullscreen Background */
+#cover-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('cover-bg.jpg'); /* Replace with your cover background */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 100;
+}
+
+/* Hide the cover image since we are using it as a background */
+#cover-image {
+  display: none;
+}
+
+/* Start Button */
+#start-button {
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: #8B0000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#start-button:hover {
+  background-color: #600000;
+}
+
+/* Game Container */
+#game-container {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Level-Specific Backgrounds */
+.level-1 {
+  background-image: url('level1-bg.jpg'); /* Replace with Level 1 background */
+}
+
+.level-2 {
+  background-image: url('level2-bg.jpg'); /* Replace with Level 2 background */
+}
+
+.level-3 {
+  background-image: url('level3-bg.jpg'); /* Replace with Level 3 background */
+}
+
+/* Level Title - Fixed */
+#level-title {
+  position: relative;
+  font-size: 24px;
+  color: white;
+  background: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  grid-gap: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+  min-height: auto;
+  transition: all 0.3s ease;
+  justify-content: center;
+  align-content: center;
+  margin: auto; /* Center the game board */
+}
+
+
+/* Card Styling - Ensure Clickable */
+.card {
+  width: 150px;
+  height: 200px;
+  perspective: 1000px;
+  position: relative;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer; /* Ensure it's clickable */
+}
+
+/* Card Inner */
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  border-radius: 8px;
+}
+
+/* Fix Front and Back */
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+}
+
+/* Fix Card Back */
+.card-back {
+  background-color: #ff6347;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  border-radius: 8px;
+}
+
+/* Fix Card Match Effect */
+.card.match .card-front {
+  background-color: rgba(50, 205, 50, 0.7) !important;
+  background-blend-mode: overlay;
+  border-radius: 8px;
+}
+
+/* Fix Card Nomatch Effect */
+.card.nomatch .card-front {
+  background-color: rgba(255, 99, 71, 0.7) !important;
+  background-blend-mode: overlay;
+  border-radius: 8px;
+}
+
+/* Hover effect */
+.card:not(.flipped):hover .card-inner {
+  transform: scale(1.1);
+}
+
+/* Next Level Button */
+#next-level-button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #008000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: none;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#next-level-button:hover {
+  background-color: #006400;
+}

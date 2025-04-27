@@ -1,0 +1,253 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+/* Cover page background */
+.cover-page {
+    background-image: url('cover-bg.jpg'); /* Set your cover background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Cover page box */
+.cover-container {
+    background: rgba(150, 0, 220, 1.6);
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    
+    /* Manually change these values to move the box */
+    top: 58%;  /* Move up/down */
+    left: 52%; /* Move left/right */
+    
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Cover title */
+.cover-container h2 {
+    color: white;
+    font-size: 2em;
+
+}
+
+h1 {
+    color: darkorchid;
+    font-size: 2em;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1.0);
+    background: rgba(0, 0, 0, 0.9);
+
+}
+
+
+
+/* Start button */
+button {
+    background-color: #ff9800;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+
+/* Level 1 background */
+.level1-page {
+    background-image: url('level1-bg.jpg'); /* Background for Level 1 */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fix Level 1 Card Layout (2x2 Grid) */
+.level1-page .game-container {
+    display: grid;
+    grid-template-columns: repeat(2, 120px); /* 2 cards per row */
+    grid-gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Card container */
+.card {
+    width: 120px;
+    height: 150px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+}
+
+/* Inner flipping element */
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Front and Back faces */
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+/* Show front first */
+.card-front img, .card-back img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Hide back initially */
+.card-back {
+    transform: rotateY(180deg);
+}
+
+/* Flip effect */
+.card.flip .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Level 2 background */
+.level2-page {
+    background-image: url('level2-bg.jpg'); /* Background for Level 2 */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Game container for 6 cards (3x2 Grid) */
+.level2-page .game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 120px); /* 3 cards per row */
+    grid-gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* Level 3 background */
+.level3-page {
+    background-image: url('level3-bg.jpg'); /* Background for Level 3 */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Game container for 12 cards */
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 120px); /* 4 cards per row */
+    grid-gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Winner page background */
+.winner-page {
+    background-image: url('winner-bg.jpg'); /* Using your provided background */
+    background-size: 100% 100%; /* Ensures full width and height fit */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+/* Winner container (Exactly inside the transparent box) */
+.winner-container {
+    background: rgba(0, 0, 0, 0.6); /* Transparent dark overlay */
+    padding: 27px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400vw; /* Ensures it fits inside the transparent box */
+    max-width: 600px;
+    height: auto;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers perfectly */
+}
+
+/* Title */
+.winner-container h3 {
+    color: navajowhite;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Student list */
+.winner-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+
+}
+
+.winner-container li {
+    color: white;
+    font-size: 1.3em;
+    margin: 5px 0;
+}
+
+/* Play Again Button */
+button {
+    background-color: #ff9800;
+    color: white;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #e68900;
+}
