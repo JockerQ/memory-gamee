@@ -283,10 +283,20 @@ button:hover {
     padding: 10px;
   }
 
-  .cover-container {
+.cover-container {
+    background: rgba(150, 0, 220, 0.9); /* Adjusted opacity */
+    padding: 20px;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
     width: 90%;
-    padding: 15px;
-  }
+    max-width: 350px;  /* ✅ Keeps it from getting too wide */
+    text-align: center;
+}
+
 
   .winner-container {
     width: 90%;
