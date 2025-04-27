@@ -298,16 +298,29 @@ button:hover {
 }
 
 
-  .winner-container {
-    width: 90%;
-    padding: 15px;
-  }
-
-  .winner-container h3 {
-    font-size: 1.5em;
-  }
-
-  .winner-container li {
-    font-size: 1.1em;
-  }
+.winner-container {
+    background: rgba(0, 0, 0, 0.75); /* dark transparent overlay */
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 85%;
+    max-width: 300px; /* fit nicely inside the white box */
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
+
+.winner-container h3 {
+    color: #ffd28a;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.winner-container li {
+    color: white;
+    font-size: 1.1em;
+    margin: 4px 0;
+}
+
