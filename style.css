@@ -300,13 +300,13 @@ button:hover {
 
 .winner-container {
     background: rgba(0, 0, 0, 0.7);
-    padding: 6px 5px 8px 1px; /* top, right, bottom, left */
+    padding: 6px 5px 8px 5px;
     border-radius: 10px;
     text-align: center;
-    width: 70%;
+    width: 70vw;
     max-width: 190px;
-    position: absolute;
-    top: 58.5%; /* lowered slightly */
+    position: fixed;
+    top: 63vh; /* vh instead of % */
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
