@@ -300,29 +300,37 @@ button:hover {
 
 .winner-container {
     background: rgba(0, 0, 0, 0.7);
-    padding: 15px 10px;
+    padding: 12px 8px;
     border-radius: 10px;
     text-align: center;
-    width: 82%;
-    max-width: 280px;
+    width: 78%;
+    max-width: 240px;
     position: absolute;
-    top: 60%;
+    top: 62%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
-
 
 .winner-container h3 {
     color: #ffd28a;
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-bottom: 8px;
 }
 
 .winner-container li {
     color: white;
-    font-size: 1em;
+    font-size: 0.95em;
     margin: 3px 0;
 }
+
+@media (max-width: 380px) {
+  .winner-container {
+    width: 90%;
+    max-width: 210px;
+    top: 63%;
+  }
+}
+
 
 
