@@ -251,3 +251,39 @@ button {
 button:hover {
     background-color: #e68900;
 }
+
+/* ✅ MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .game-container {
+    grid-template-columns: repeat(2, 100px); /* 2 cards per row */
+    grid-gap: 10px;
+  }
+
+  .card {
+    width: 100px;
+    height: 130px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    padding: 10px;
+  }
+
+  .cover-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .winner-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .winner-container h3 {
+    font-size: 1.5em;
+  }
+
+  .winner-container li {
+    font-size: 1.1em;
+  }
+}
