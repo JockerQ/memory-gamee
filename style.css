@@ -150,11 +150,12 @@ button:hover {
 /* Game container for 6 cards (3x2 Grid) */
 .level2-page .game-container {
     display: grid;
-    grid-template-columns: repeat(3, 120px); /* 3 cards per row */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 15px;
-    justify-content: center;
-    align-items: center;
+    max-width: 360px;
+    margin: 0 auto;
 }
+
 
 
 
@@ -174,10 +175,11 @@ button:hover {
 /* Game container for 12 cards */
 .game-container {
     display: grid;
-    grid-template-columns: repeat(4, 120px); /* 4 cards per row */
-    grid-gap: 15px;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    padding: 10px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 
