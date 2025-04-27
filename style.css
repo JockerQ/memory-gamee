@@ -306,7 +306,7 @@ button:hover {
     width: 70vw;
     max-width: 190px;
     position: fixed;
-    top: 63vh; /* vh instead of % */
+    top: 58.5vh; /* vh instead of % */
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
