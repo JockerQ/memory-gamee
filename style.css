@@ -195,22 +195,7 @@ button:hover {
 
 
 
-/* Winner page background */
-.winner-page {
-    background-image: url('winner-bg.jpg'); /* Using your provided background */
-    background-size: 100% 100%; /* Ensures full width and height fit */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
+
 
 
 /* Winner container (Exactly inside the transparent box) */

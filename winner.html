@@ -10,24 +10,29 @@
       margin: 0;
       padding: 0;
       background: url('winner-bg-converted.png') no-repeat center center fixed;
-      background-size: cover;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
       height: 100vh;
+      width: 100vw;
+      overflow: hidden;
       position: relative;
     }
 
     .play-again-zone {
       position: absolute;
-      bottom: 8%;  /* adjust this based on exact button position */
+      top: 60%; /* Adjust this value to move button UP/DOWN */
       left: 50%;
       transform: translateX(-50%);
-      width: 200px;  /* width of clickable zone */
-      height: 60px;  /* height of clickable zone */
+      width: 220px;
+      height: 60px;
       cursor: pointer;
       background-color: rgba(255, 255, 255, 0); /* fully transparent */
+      z-index: 10;
     }
 
     .play-again-zone:hover {
-      background-color: rgba(255, 255, 255, 0.1); /* subtle feedback on hover */
+      background-color: rgba(255, 255, 255, 0.1); /* slight feedback */
     }
   </style>
 </head>
