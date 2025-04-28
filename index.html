@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Game</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('cover-bg.jpg') no-repeat center center fixed;
+      background-size: 100% 100%; /* Fits whole image */
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .start-game-zone {
+      position: absolute;
+      top: 72%;  /* Adjust this to align over "Start Game" */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 170px;
+      height: 50px;
+      background-color: rgba(255, 255, 255, 0); /* Transparent */
+      cursor: pointer;
+      z-index: 99;
+    }
+
+    .start-game-zone:hover {
+      background-color: rgba(255, 255, 255, 0.08); /* Optional hover */
+    }
+  </style>
 </head>
-<body class="cover-page">
-    <div class="cover-container">
-        <h2>Welcome to the Memory Game</h2>
-        <button onclick="startGame()">Start Game</button>
-    </div>
-    <script>
-        function startGame() {
-            window.location.href = "level1.html"; // Redirect to Level 1
-        }
-    </script>
+<body>
+  <a href="level1.html" class="start-game-zone" title="Start Game"></a>
 </body>
 </html>
