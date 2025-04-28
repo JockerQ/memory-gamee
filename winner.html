@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Completed</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Completed</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('winner-bg-converted.png') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      position: relative;
+    }
+
+    .play-again-zone {
+      position: absolute;
+      bottom: 8%;  /* adjust this based on exact button position */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;  /* width of clickable zone */
+      height: 60px;  /* height of clickable zone */
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0); /* fully transparent */
+    }
+
+    .play-again-zone:hover {
+      background-color: rgba(255, 255, 255, 0.1); /* subtle feedback on hover */
+    }
+  </style>
 </head>
-<body class="winner-page">
-    <div class="winner-container">
-        <h3>Congratulations! You Completed the Memory Game</h3>
-        <ul>
-            <li>Eng. Dhuha Al Harbi</li>
-            <li> Eng. Reem Al Mutairi</li>
-            <li> Eng. Mariam Alsaeedi</li>
-            <li> Eng. Reem Al Hussaini</li>
-            <li> Eng. Awatef Alshammari</li>
-        </ul>
-        <button onclick="restartGame()">Play Again</button>
-    </div>
-    <script>
-        function restartGame() {
-            window.location.href = "index.html"; // Redirect back to cover page
-        }
-    </script>
+<body>
+  <a href="index.html" class="play-again-zone" title="Play Again"></a>
 </body>
 </html>
