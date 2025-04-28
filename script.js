@@ -8,7 +8,17 @@ function shuffleCards() {
 }
 
 // Shuffle cards when the page loads
-window.onload = shuffleCards;
+window.onload = function () {
+    shuffleCards();
+
+    // Reveal all cards for 3 seconds
+    cards.forEach(card => card.classList.add('flip'));
+
+    setTimeout(() => {
+        cards.forEach(card => card.classList.remove('flip'));
+    }, 3000);
+};
+
 
 let flippedCards = [];
 let matchedPairs = 0;
